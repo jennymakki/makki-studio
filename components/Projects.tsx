@@ -1,27 +1,28 @@
 import { projects } from "@/data/projects";
+import { Card } from "@/components/Card";
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
-      <h2 className="text-2xl md:text-3xl font-semibold">
+    <section id="projects" className="mx-auto max-w-6xl px-6 py-5">
+      <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
         Utvalda projekt
       </h2>
 
-      <p className="text-gray-400 mt-2">
-        Några saker jag har byggt nyligen.
+      <p className="mt-4 max-w-2xl text-base md:text-lg text-[#3A3A3A] leading-relaxed">
+        Ett urval av webbplatser och applikationer jag har designat och
+        utvecklat — från företagswebbplatser och e-handel till skräddarsydda
+        digitala verktyg.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
         {projects.map((project) => (
-          <div
+          <Card
             key={project.title}
-            className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
-          >
-            <h3 className="font-medium text-lg">{project.title}</h3>
-            <p className="text-gray-400 mt-2 text-sm">
-              {project.description}
-            </p>
-          </div>
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            url={project.url}
+          />
         ))}
       </div>
     </section>
