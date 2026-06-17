@@ -15,7 +15,8 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20">
+    <section className="mx-auto max-w-6xl px-6 py-20"
+    id="services">
       <h2 className="text-2xl md:text-3xl font-semibold">
         Tjänster
       </h2>
