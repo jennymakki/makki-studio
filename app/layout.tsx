@@ -8,25 +8,38 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Makki Studio — Webbutveckling för moderna företag",
+  title: "Makki Studio — Moderna webbplatser som hjälper företag att växa",
   description:
-    "Makki Studio bygger snabba, moderna och skalbara webbplatser för startups och småföretag med Next.js, TypeScript och Tailwind.",
+    "Makki Studio designar och utvecklar moderna, snabba och användarvänliga webbplatser för företag och organisationer som vill växa online.",
+
   icons: {
     icon: "/favicon.png",
   },
-    keywords: [
-    "webbutveckling",
-    "nextjs utvecklare",
-    "freelance developer sverige",
-    "makki studio",
-    "hemsida företag",
-  ],
-  metadataBase: new URL("https://makki.studio"),
+
+  metadataBase: new URL("https://makkistudio.vercel.app/"),
+
   openGraph: {
     title: "Makki Studio",
     description:
       "Moderna webbplatser för företag som vill växa.",
     type: "website",
+    url: "https://makkistudio.vercel.app/",
+    images: [
+    {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Makki Studio",
+    },
+  ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Makki Studio",
+    description:
+      "Moderna webbplatser för företag som vill växa.",
+      images: ["/og-image.png"],
   },
 };
 
