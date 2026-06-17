@@ -36,7 +36,7 @@ export function Card({
             {title}
           </h3>
 
-          <p className="mt-2 text-sm text-[#3A3A3A] leading-relaxed flex-1">
+          <p className="mt-2 text-base text-[#3A3A3A] leading-relaxed flex-1">
             {description}
           </p>
         </div>

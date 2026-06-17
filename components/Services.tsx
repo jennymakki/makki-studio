@@ -1,36 +1,57 @@
+import { Globe, RefreshCw, TrendingUp } from "lucide-react";
+
 const services = [
   {
-    title: "Webbutveckling",
-    desc: "Snabba och moderna webbappar med Next.js.",
+    title: "Ny webbplats",
+    desc: "Från idé till färdig webbplats som presenterar din verksamhet på ett tydligt och professionellt sätt.",
+    icon: Globe,
   },
   {
     title: "Vidareutveckling",
-    desc: "Förbättrar och bygger vidare på befintliga system.",
+    desc: "Förbättringar och nya funktioner för befintliga webbplatser och digitala tjänster.",
+    icon: RefreshCw,
   },
   {
-    title: "Prestanda & SEO",
-    desc: "Gör sajter snabbare och mer synliga på Google.",
+    title: "Synlighet & prestanda",
+    desc: "Snabba, tillgängliga webbplatser som ger en bättre upplevelse för både besökare och sökmotorer.",
+    icon: TrendingUp,
   },
 ];
 
 export default function Services() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20"
-    id="services">
-      <h2 className="text-2xl md:text-3xl font-semibold">
-        Tjänster
+    <section id="services" className="mx-auto max-w-6xl px-6 py-20">
+      <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
+        Hur jag kan hjälpa till
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-10">
-        {services.map((s) => (
-          <div
-            key={s.title}
-            className="p-6 rounded-2xl border border-white/10 bg-white/5"
-          >
-            <h3 className="font-medium">{s.title}</h3>
-            <p className="text-gray-400 mt-2 text-sm">{s.desc}</p>
-          </div>
-        ))}
+      <p className="mt-4 max-w-2xl text-base md:text-lg text-[#3A3A3A] leading-relaxed">
+        Oavsett om du behöver en helt ny webbplats eller vill utveckla något som
+        redan finns hjälper jag dig att skapa en lösning som är tydlig,
+        användarvänlig och byggd för att hålla över tid.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        {services.map((service) => {
+          const Icon = service.icon;
+
+          return (
+            <div
+              key={service.title}
+              className="p-6 rounded-2xl bg-[#F7F2EA] border border-[rgba(47,93,80,0.12)] shadow-sm hover:shadow-md transition text-center"
+            >
+              <Icon className="w-5 h-5 text-[#2F5D50] mb-4 mx-auto" />
+
+              <h3 className="text-lg font-medium text-[#2F5D50]">
+                {service.title}
+              </h3>
+
+              <p className="mt-3 text-[#3A3A3A] leading-relaxed">
+                {service.desc}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
