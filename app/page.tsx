@@ -7,18 +7,17 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Process from "@/components/Process";
 import About from "@/components/About";
-import Quote1 from "@/components/Quote1";
-import Quote2 from "@/components/Quote2";
+import Flower from "@/components/Flower";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F3EDE3]">
       <Navbar />
       <Hero />
-      <Quote1 />
+      <Flower />
       <Reasons />
       <Projects />
-      <Quote2 />
+      <Flower />
       <Services />
       <Process />
       <CTA />

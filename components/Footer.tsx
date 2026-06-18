@@ -16,12 +16,10 @@ export default function Footer() {
               />
 
               <div className="leading-none">
-                <div className="text-[#2F5D50] font-semibold tracking-tight">
+                <div className="text-[#2F5D50] text-lg font-semibold tracking-tight">
                   MAKKI
                 </div>
-                <div className="text-xs text-[#7A9B8E] tracking-widest">
-                  STUDIO
-                </div>
+                <div className=" text-[#5A7A6E] tracking-widest">STUDIO</div>
               </div>
             </div>
 

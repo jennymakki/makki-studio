@@ -10,19 +10,7 @@ export default function Quote1() {
           alt="Flower"
           width={120}
           height={120}
-          className="opacity-70"
-        />
-
-        <p className="text-2xl md:text-4xl font-light text-[#2F5D50] leading-relaxed max-w-2xl">
-          Teknik ska vara enkelt att förstå
-        </p>
-
-        <Image
-          src="/flower.png"
-          alt="Flower"
-          width={120}
-          height={120}
-          className="opacity-70 rotate-180"
+          className="opacity-90"
         />
       </div>
     </section>
