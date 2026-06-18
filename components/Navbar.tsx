@@ -36,7 +36,7 @@ export default function Navbar() {
           <ButtonGhost href="#projects">Projekt</ButtonGhost>
           <ButtonGhost href="#services">Tjänster</ButtonGhost>
           <ButtonGhost href="#cta">Kontakt</ButtonGhost>
-          <ButtonGhost href="about">Om mig</ButtonGhost>
+          <ButtonGhost href="#about">Om mig</ButtonGhost>
         </nav>
 
         <div className="hidden md:block">

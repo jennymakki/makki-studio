@@ -4,9 +4,9 @@ export default function About() {
   return (
     <section id="about" className="mx-auto max-w-5xl px-6 py-20">
       <div className="grid gap-12 items-center md:grid-cols-2">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#F7F2EA]">
+        <div className="relative mx-auto w-full max-w-sm aspect-[4/5] overflow-hidden rounded-2xl bg-[#F7F2EA]">
           <Image
-            src="/.png"
+            src="/makki.png"
             alt="Porträtt av Makki"
             fill
             className="object-cover"
