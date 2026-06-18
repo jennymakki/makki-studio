@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <section id="cta" className="mx-auto max-w-6xl px-6 py-24">
+    <section id="cta" className="mx-auto max-w-5xl px-6 py-24">
       
       <div className="rounded-3xl bg-[#F7F2EA] border border-[rgba(47,93,80,0.12)] p-10 md:p-16 text-center shadow-sm">
         

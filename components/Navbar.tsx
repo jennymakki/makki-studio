@@ -36,6 +36,7 @@ export default function Navbar() {
           <ButtonGhost href="#projects">Projekt</ButtonGhost>
           <ButtonGhost href="#services">Tjänster</ButtonGhost>
           <ButtonGhost href="#cta">Kontakt</ButtonGhost>
+          <ButtonGhost href="about">Om mig</ButtonGhost>
         </nav>
 
         <div className="hidden md:block">
@@ -100,6 +101,14 @@ export default function Navbar() {
                 className="px-5 py-4 text-[#3A3A3A] hover:bg-[#2F5D50]/5 hover:text-[#2F5D50] transition border-t border-[#2F5D50]/5"
               >
                 Kontakt
+              </a>
+
+               <a
+                href="#about"
+                onClick={() => setOpen(false)}
+                className="px-5 py-4 text-[#3A3A3A] hover:bg-[#2F5D50]/5 hover:text-[#2F5D50] transition border-t border-[#2F5D50]/5"
+              >
+                Om mig
               </a>
 
               <div className="p-4 border-t border-[#2F5D50]/10">

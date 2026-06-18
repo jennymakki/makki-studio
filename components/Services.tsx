@@ -1,26 +1,26 @@
-import { Globe, RefreshCw, TrendingUp } from "lucide-react";
+import { Globe, AppWindow, Palette } from "lucide-react";
 
 const services = [
   {
-    title: "Ny webbplats",
-    desc: "Från idé till färdig webbplats som presenterar din verksamhet på ett tydligt och professionellt sätt.",
+    title: "Webbplatser",
+    desc: "Professionella hemsidor för företag, kreatörer och organisationer.",
     icon: Globe,
   },
   {
-    title: "Vidareutveckling",
-    desc: "Förbättringar och nya funktioner för befintliga webbplatser och digitala tjänster.",
-    icon: RefreshCw,
+    title: "Webbappar",
+    desc: "När du behöver inloggning, databaser eller skräddarsydd funktionalitet.",
+    icon: AppWindow,
   },
   {
-    title: "Synlighet & prestanda",
-    desc: "Snabba, tillgängliga webbplatser som ger en bättre upplevelse för både besökare och sökmotorer.",
-    icon: TrendingUp,
+    title: "Design & vidareutveckling",
+    desc: "Jag hjälper dig utveckla det du redan har – eller skapa något helt nytt.",
+    icon: Palette,
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="mx-auto max-w-6xl px-6 py-20">
+    <section id="services" className="mx-auto max-w-5xl px-6 py-20">
       <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
         Tjänster
       </h2>

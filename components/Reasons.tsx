@@ -20,7 +20,7 @@ const reasons = [
 
 export default function Reasons() {
   return (
-    <section id="services" className="mx-auto max-w-6xl px-6 pt-5 pb-20 ">
+    <section id="reasons" className="mx-auto max-w-5xl px-6 pt-5 py-20 ">
       <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
         Varför Makki Studio?
       </h2>
