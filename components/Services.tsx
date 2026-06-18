@@ -22,7 +22,7 @@ export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-6xl px-6 py-20">
       <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
-        Hur jag kan hjälpa till
+        Tjänster
       </h2>
 
       <p className="mt-4 max-w-2xl text-base md:text-lg text-[#3A3A3A] leading-relaxed">
