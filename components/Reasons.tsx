@@ -8,7 +8,7 @@ const reasons = [
   },
   {
     title: "Modern teknik",
-    desc: "Byggt med Next.js, TypeScript och fokus på prestanda.",
+    desc: "Byggt med React, Next.js, TypeScript och moderna headless-lösningar som Shopify.",
     icon: WandSparkles,
   },
   {

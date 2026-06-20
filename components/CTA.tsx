@@ -14,7 +14,7 @@ export default function CTA() {
         </p>
 
         <a
-          href="mailto:jjennyeklundd@hotmail.com"
+          href="mailto:makkistudio@hotmail.com"
           className="inline-block mt-8 bg-[#2F5D50] hover:bg-[#244A3F] transition text-white px-6 py-3 rounded-xl font-medium"
         >
           Kontakta mig
