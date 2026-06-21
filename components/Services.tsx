@@ -1,19 +1,20 @@
 import { Globe, AppWindow, Palette } from "lucide-react";
+import { Button } from "./Button";
 
 const services = [
   {
     title: "Webbplatser",
-    desc: "Professionella hemsidor för företag, kreatörer och organisationer.",
+    desc: "Design och utveckling av moderna hemsidor som presenterar ditt företag och hjälper dig få fler kunder.",
     icon: Globe,
   },
   {
     title: "Webbappar",
-    desc: "När du behöver inloggning, databaser eller skräddarsydd funktionalitet.",
+    desc: "Skräddarsydda system med inloggning, databaser och funktioner anpassade efter din verksamhet.",
     icon: AppWindow,
   },
   {
-    title: "Design & vidareutveckling",
-    desc: "Jag hjälper dig utveckla det du redan har – eller skapa något helt nytt.",
+    title: "Vidareutveckling",
+    desc: "Förbättring av befintliga webbplatser – design, prestanda och nya funktioner.",
     icon: Palette,
   },
 ];
@@ -52,6 +53,16 @@ export default function Services() {
             </div>
           );
         })}
+      </div>
+
+      <div className="mt-14 text-center">
+        <p className=" text-[#3A3A3A] mb-4">Vill du se priser och paket?</p>
+
+        <div className="flex justify-center">
+          <Button href="/services" className="w-auto">
+            Se paket & priser
+          </Button>
+        </div>
       </div>
     </section>
   );

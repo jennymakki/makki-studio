@@ -37,7 +37,7 @@ export default function Footer() {
               href="mailto:jjennyeklundd@hotmail.com"
               className="block hover:underline"
             >
-              jjennyeklundd@hotmail.com
+              makkistudio@hotmail.com
             </a>
 
             <a

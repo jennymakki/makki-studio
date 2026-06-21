@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { ButtonPrimary, ButtonSecondary } from "./Button";
+import { Button } from "./Button";
 import Image from "next/image";
 
 export default function Hero() {
@@ -25,11 +25,13 @@ export default function Hero() {
           </p>
 
           <div className="order-4 mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <ButtonPrimary href="#projects">
+            <Button href="#projects">
               Se projekt <ArrowRight size={18} />
-            </ButtonPrimary>
+            </Button>
 
-            <ButtonSecondary href="#cta">Kontakta mig</ButtonSecondary>
+            <Button href="#cta" variant="secondary">
+              Kontakta mig
+            </Button>
           </div>
         </div>
 

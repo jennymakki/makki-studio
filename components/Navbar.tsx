@@ -2,18 +2,25 @@
 
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { ButtonPrimary, ButtonGhost } from "@/components/Button";
+import Link from "next/link";
+
+import { Button } from "@/components/Button";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  function toSection(id: string) {
+    return pathname === "/" ? `#${id}` : `/#${id}`;
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#2F5D50]/10 bg-[#F3EDE3]/80 backdrop-blur-md">
-
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="Makki Studio logo"
@@ -26,23 +33,32 @@ export default function Navbar() {
             <div className="text-[#2F5D50] text-lg font-semibold tracking-tight">
               MAKKI
             </div>
-            <div className=" text-[#5A7A6E] tracking-widest">
-              STUDIO
-            </div>
+            <div className="text-[#5A7A6E] tracking-widest">STUDIO</div>
           </div>
-        </div>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-2">
-          <ButtonGhost href="#projects">Projekt</ButtonGhost>
-          <ButtonGhost href="#services">Tjänster</ButtonGhost>
-          <ButtonGhost href="#cta">Kontakt</ButtonGhost>
-          <ButtonGhost href="#about">Om mig</ButtonGhost>
+          <Button variant="ghost" href={toSection("projects")}>
+            Projekt
+          </Button>
+
+          <Button variant="ghost" href="/services">
+            Tjänster
+          </Button>
+
+          <Button variant="ghost" href={toSection("cta")}>
+            Kontakt
+          </Button>
+
+          <Button variant="ghost" href={toSection("about")}>
+            Om mig
+          </Button>
         </nav>
 
         <div className="hidden md:block">
-          <ButtonPrimary href="#cta">
+          <Button href={toSection("cta")}>
             Boka möte <ArrowRight size={16} />
-          </ButtonPrimary>
+          </Button>
         </div>
 
         <button
@@ -69,67 +85,53 @@ export default function Navbar() {
             }`}
           />
         </button>
-
       </div>
 
       {open && (
         <div className="md:hidden px-6 pb-6">
-
           <div className="mt-3 rounded-2xl border border-[#2F5D50]/10 bg-[#F3EDE3]/95 backdrop-blur-xl shadow-xl overflow-hidden">
-
             <div className="flex flex-col">
-
-              <a
-                href="#projects"
-                onClick={() => setOpen(false)}
-                className="px-5 py-4 text-[#3A3A3A] hover:bg-[#2F5D50]/5 hover:text-[#2F5D50] transition"
+              <Button
+                variant="ghost"
+                href={toSection("projects")}
+                className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
                 Projekt
-              </a>
+              </Button>
 
-              <a
-                href="#services"
-                onClick={() => setOpen(false)}
-                className="px-5 py-4 text-[#3A3A3A] hover:bg-[#2F5D50]/5 hover:text-[#2F5D50] transition border-t border-[#2F5D50]/5"
+              <Button
+                variant="ghost"
+                href="/services"
+                className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
                 Tjänster
-              </a>
+              </Button>
 
-              <a
-                href="#cta"
-                onClick={() => setOpen(false)}
-                className="px-5 py-4 text-[#3A3A3A] hover:bg-[#2F5D50]/5 hover:text-[#2F5D50] transition border-t border-[#2F5D50]/5"
+              <Button
+                variant="ghost"
+                href={toSection("cta")}
+                className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
                 Kontakt
-              </a>
+              </Button>
 
-               <a
-                href="#about"
-                onClick={() => setOpen(false)}
-                className="px-5 py-4 text-[#3A3A3A] hover:bg-[#2F5D50]/5 hover:text-[#2F5D50] transition border-t border-[#2F5D50]/5"
+              <Button
+                variant="ghost"
+                href={toSection("about")}
+                className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
                 Om mig
-              </a>
+              </Button>
 
               <div className="p-4 border-t border-[#2F5D50]/10">
-                <a
-                  href="#cta"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium transition-colors"
-                  style={{
-                    backgroundColor: "#2F5D50",
-                    color: "#F3EDE3",
-                  }}
-                >
+                <Button href="#cta" className="w-full">
                   Boka möte <ArrowRight size={16} />
-                </a>
+                </Button>
               </div>
-
             </div>
           </div>
         </div>
       )}
-
     </header>
   );
 }
