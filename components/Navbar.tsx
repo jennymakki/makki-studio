@@ -43,7 +43,7 @@ export default function Navbar() {
           </Button>
 
           <Button variant="ghost" href="/services">
-            Tjänster
+            Paket & priser
           </Button>
 
           <Button variant="ghost" href={toSection("cta")}>
@@ -104,7 +104,7 @@ export default function Navbar() {
                 href="/services"
                 className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
-                Tjänster
+                Paket & priser
               </Button>
 
               <Button
