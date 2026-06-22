@@ -14,7 +14,8 @@ const packages = [
       "Publicering av sidan",
       "Två korrekturrundor",
     ],
-    highlight: "Perfekt för mindre företag som vill ha en stark digital närvaro.",
+    highlight:
+      "Perfekt för mindre företag som vill ha en stark digital närvaro.",
     icon: Leaf,
   },
   {
@@ -38,7 +39,7 @@ const packages = [
     price: "Offert",
     desc: "För företag med behov av mer avancerade digitala lösningar.",
     features: [
-        "Allt i Start och Business",
+      "Allt i Start och Business",
       "Webbshop / e-handel",
       "Bokningssystem",
       "Inloggning / medlemsfunktioner",
@@ -80,9 +81,7 @@ export default function Packages() {
                   </h3>
                 </div>
 
-                <p className="text-xl font-light text-[#2F5D50]">
-                  {pkg.price}
-                </p>
+                <p className="text-xl font-light text-[#2F5D50]">{pkg.price}</p>
 
                 <p className="mt-3 text-[#3A3A3A] leading-relaxed">
                   {pkg.desc}
@@ -105,6 +104,10 @@ export default function Packages() {
           );
         })}
       </div>
+      <p className="mt-4 max-w-4xl text-sm text-[#3A3A3A] opacity-70">
+        Alla priser anges exklusive moms. En fast offert tas alltid fram innan
+        start.
+      </p>
     </section>
   );
 }
