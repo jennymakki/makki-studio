@@ -10,16 +10,15 @@ export default function Hero() {
       className="relative overflow-hidden min-h-screen flex items-center"
       style={{ backgroundColor: "#F3EDE3" }}
     >
-      <div className="mx-auto max-w-3xl w-full px-6 md:px-12 pt-30 md:py-20 md:pt-36 text-center">
+      <div className="mx-auto max-w-4xl w-full px-6 md:px-12 pt-30 md:py-20 md:pb-0 md:pt-36 text-center">
         <h1 className="text-4xl md:text-6xl font-light tracking-tight leading-tight text-[#2F5D50]">
-          Moderna webbplatser för företag som vill växa.
+          Jag bygger webbplatser som företag kan växa med.
         </h1>
 
         <p className="mt-6 text-base md:text-xl text-[#3A3A3A] leading-relaxed">
-          Jag heter Jenny och är fullstackutvecklare med bakgrund inom
-          undervisning. Jag hjälper företag, föreningar och organisationer att
-          gå från idé till färdig webbplats — med fokus på tydlighet,
-          användbarhet och förtroende.
+          Från första idé till färdig lansering hjälper jag dig genom hela
+          processen. Du får en professionell och modern webbplats, personlig kontakt och en
+          lösning som är enkel att använda och utveckla vidare.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -32,7 +31,7 @@ export default function Hero() {
           </Button>
         </div>
         <div className="py-10">
-        <Flower />
+          <Flower />
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ const packages = [
       "Modern och stilren design",
       "Mobilanpassning",
       "Kontaktformulär",
-      "Grundläggande synlighet i webbläsare",
+      "Grundläggande sökmotoroptimering (SEO)",
       "Publicering av sidan",
       "Två korrekturrundor",
     ],
