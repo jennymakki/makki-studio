@@ -9,6 +9,7 @@ import Process from "@/components/Process";
 import About from "@/components/About";
 import Flower from "@/components/Flower";
 import Testimonial from "@/components/Testimonial";
+import FAQHome from "@/components/FaqHome";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Flower />
       <Services />
       <Process />
+      <FAQHome />
       <CTA />
       <About />
       <Footer />

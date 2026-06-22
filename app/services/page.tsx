@@ -5,6 +5,7 @@ import HeroServices from "@/components/HeroServices";
 import Packages from "@/components/Packages";
 import Process from "@/components/Process";
 import ExistingWebsite from "@/components/ExistingWebsite";
+import FAQPackages from "@/components/FaqPackages";
 
 export default function ServicesPage() {
   return (
@@ -14,6 +15,7 @@ export default function ServicesPage() {
         <Packages />
         <ExistingWebsite />
         <Process />
+        <FAQPackages />
         <CTA />
         <Footer/>
     </main>

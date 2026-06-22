@@ -40,7 +40,7 @@ export default function Process() {
         vad som händer härnäst – från första samtalet till en färdig webbplats.
       </p>
 
-      <div className="mt-12 space-y-4">
+      <div className="mt-12 max-w-3xl space-y-4">
         {steps.map((step, index) => (
           <div key={step.number}>
             <div className="rounded-2xl border border-[rgba(47,93,80,0.12)] bg-[#F7F2EA] p-6 shadow-sm">
@@ -68,18 +68,6 @@ export default function Process() {
             )}
           </div>
         ))}
-      </div>
-
-      <div className="mt-16 rounded-2xl bg-[#2F5D50] p-8 text-white">
-        <h3 className="text-xl font-medium">
-          En tydlig process ger ett bättre resultat
-        </h3>
-
-        <p className="mt-4 leading-relaxed text-white/90">
-          Många som kontaktar mig undrar hur ett webbprojekt egentligen går
-          till. Med en tydlig process vet du vad som händer i varje steg och kan
-          känna dig trygg genom hela projektet.
-        </p>
       </div>
     </section>
   );

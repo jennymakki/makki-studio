@@ -8,9 +8,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Makki Studio — Moderna webbplatser som hjälper företag att växa",
+  title: "Webbutvecklare & hemsidor för företag | Makki Studio",
   description:
-    "Makki Studio designar och utvecklar moderna, snabba och användarvänliga webbplatser för företag och organisationer som vill växa online.",
+    "Jag bygger moderna, snabba och användarvänliga hemsidor för företag som vill växa online. Från design till utveckling och lansering.",
 
   icons: {
     icon: "/favicon.png",
@@ -19,27 +19,27 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://makkistudio.vercel.app/"),
 
   openGraph: {
-    title: "Makki Studio",
+    title: "Makki Studio — Webbutveckling för företag",
     description:
-      "Moderna webbplatser för företag som vill växa.",
+      "Moderna hemsidor och webbappar för företag som vill växa online.",
     type: "website",
     url: "https://makkistudio.vercel.app/",
     images: [
-    {
-      url: "/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Makki Studio",
-    },
-  ],
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Makki Studio",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Makki Studio",
+    title: "Makki Studio — Webbutveckling",
     description:
-      "Moderna webbplatser för företag som vill växa.",
-      images: ["/og-image.png"],
+      "Moderna hemsidor för företag som vill växa online.",
+    images: ["/og-image.png"],
   },
 };
 
