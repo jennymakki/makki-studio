@@ -16,7 +16,7 @@ export default function ExistingWebsite() {
       <div className="rounded-3xl bg-[#F7F2EA] border border-[rgba(47,93,80,0.12)] p-8 md:p-12">
 
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#2F5D50]/10 flex items-center justify-center">
+          <div className=" flex items-center justify-center">
             <Wrench className="w-5 h-5 text-[#2F5D50]" />
           </div>
 
