@@ -3,9 +3,9 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import HeroServices from "@/components/HeroServices";
 import Packages from "@/components/Packages";
-import Process from "@/components/Process";
 import ExistingWebsite from "@/components/ExistingWebsite";
 import FAQPackages from "@/components/FaqPackages";
+import SupportPlans from "@/components/SupportPlans";
 
 export default function ServicesPage() {
   return (
@@ -14,7 +14,7 @@ export default function ServicesPage() {
         <HeroServices />
         <Packages />
         <ExistingWebsite />
-        <Process />
+        <SupportPlans />
         <FAQPackages />
         <CTA />
         <Footer/>
