@@ -18,6 +18,6 @@ export const projects = [
     description:
       "Design och utveckling av en pedagogisk webbplats där en lärare presenterar sitt undervisningsmaterial. Elever kan enkelt ta del av och ladda ner innehåll. Fokus låg på tydlig struktur, användarvänlighet och en responsiv design anpassad för skolmiljö.",
     image: "/projects/makkisvetenskapsrum.png",
-    url: "https://makkis-vetenskapsrum.onrender.com/",
+    url: "https://makkis-vetenskaps-rum-1.vercel.app/",
   },
 ];
