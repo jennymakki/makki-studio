@@ -11,7 +11,7 @@ export const projects = [
     description:
       "Design och utveckling av en författarwebbplats med fokus på bokpresentation, evenemang och en tydlig väg till kontakt och försäljning.",
     image: "/projects/heby-historia.png",
-    url: "https://anderseklund.vercel.app/",
+    url: "https://hebyhistoria.se/",
   },
   {
     title: "Makkis vetenskapsrum",
