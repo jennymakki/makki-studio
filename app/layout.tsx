@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
 
-  metadataBase: new URL("https://makkistudio.vercel.app/"),
+  metadataBase: new URL("https://www.makkistudio.se/"),
+
+  verification: {
+    google: "LNewI2VTW-7ROzqt-w_qsbfkJh7D3uOHQsuQKRuX-Ac",
+  },
 
   openGraph: {
     title: "Makki Studio — Webbutveckling för företag",
@@ -37,8 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Makki Studio — Webbutveckling",
-    description:
-      "Moderna hemsidor för företag som vill växa online.",
+    description: "Moderna hemsidor för företag som vill växa online.",
     images: ["/og-image.png"],
   },
 };
