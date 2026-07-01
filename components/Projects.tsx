@@ -1,7 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import { projects } from "@/data/projects";
 import { Card } from "@/components/ProjectCard";
+import { Button } from "@/components/Button";
 
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20">
       <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
@@ -15,7 +23,7 @@ export default function Projects() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-        {projects.map((project) => (
+        {visibleProjects.map((project) => (
           <Card
             key={project.title}
             title={project.title}
@@ -25,6 +33,17 @@ export default function Projects() {
           />
         ))}
       </div>
+
+      {projects.length > 3 && (
+        <div className="mt-10 flex justify-center">
+          <Button
+            variant="secondary"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Visa mindre" : "Se fler projekt"}
+          </Button>
+        </div>
+      )}
     </section>
   );
 }
