@@ -8,7 +8,7 @@ import { Button } from "@/components/Button";
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
-  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+  const visibleProjects = projects
 
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20">
@@ -33,17 +33,6 @@ export default function Projects() {
           />
         ))}
       </div>
-
-      {projects.length > 3 && (
-        <div className="mt-10 flex justify-center">
-          <Button
-            variant="secondary"
-            onClick={() => setShowAll(!showAll)}
-          >
-            {showAll ? "Visa mindre" : "Se fler projekt"}
-          </Button>
-        </div>
-      )}
     </section>
   );
 }

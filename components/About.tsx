@@ -6,9 +6,10 @@ export default function About() {
       <div className="grid gap-12 items-center md:grid-cols-2">
         <div className="relative mx-auto w-full max-w-sm aspect-[4/5] overflow-hidden rounded-2xl bg-[#F7F2EA]">
           <Image
-            src="/makki.png"
+            src="/m.png"
             alt="Porträtt av Makki"
             fill
+            quality={20}
             className="object-cover"
           />
         </div>

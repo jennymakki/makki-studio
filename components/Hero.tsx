@@ -1,38 +1,70 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { Button } from "./Button";
-import Flower from "@/components/Flower";
+
+const tags = [
+  "React",
+  "Squarespace",
+  "Shopify",
+  "WordPress",
+];
 
 export default function Hero() {
   return (
-    <section
-      className="relative overflow-hidden min-h-screen flex items-center"
-      style={{ backgroundColor: "#F3EDE3" }}
-    >
-      <div className="mx-auto max-w-4xl w-full px-6 md:px-12 pt-30 md:py-20 md:pb-0 md:pt-36 text-center">
-        <h1 className="text-4xl md:text-6xl font-light tracking-tight leading-tight text-[#2F5D50]">
-          Jag bygger webbplatser som företag kan växa med.
-        </h1>
+    <section className="relative overflow-hidden min-h-screen flex items-center">
+      <div className="mx-auto max-w-7xl w-full px-6 md:px-12 py-20">
 
-        <p className="mt-6 text-base md:text-xl text-[#3A3A3A] leading-relaxed">
-          Från första idé till färdig lansering hjälper jag dig genom hela
-          processen. Du får en professionell och modern webbplats, personlig kontakt och en
-          lösning som är enkel att använda och utveckla vidare.
-        </p>
+        <div className="grid md:grid-cols-2 gap-15 mt-10 lg:gap-0 items-center">
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <Button href="#projects">
-            Se projekt <ArrowRight size={18} />
-          </Button>
+          <div>
+            <div className="flex flex-wrap gap-3 mb-10">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-lg bg-[#2F5D50]/4 px-2 py-2 text-xs text-[#2F5D50]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
 
-          <Button href="#cta" variant="secondary">
-            Kontakta mig
-          </Button>
+            <h1 className="max-w-xl text-3xl md:text-4xl font-light tracking-tight leading-[1.25] text-[#2F5D50]">
+              Jag designar och utvecklar webbplatser som känns lika unika som företagen bakom dem.
+            </h1>
+
+            <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#5A5A5A]">
+              Din webbplats är ofta det första intrycket av ditt företag.
+              Jag skapar moderna webbplatser som speglar ditt varumärke,
+              inger förtroende och hjälper dina besökare att hitta rätt.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button href="#projects">
+                Se projekt
+              </Button>
+
+              <Button href="#cta" variant="secondary">
+                Kontakta mig
+              </Button>
+            </div>
+          </div>
+
+
+          {/* Mockup */}
+          <div className="flex justify-center items-center">
+            <Image
+              src="/mockups/abrielle.svg"
+              width={650}
+              height={700}
+              alt="Abrielle website design"
+              className="w-full max-w-lg drop-shadow-xl"
+              priority
+            />
+          </div>
+
         </div>
-        <div className="py-10">
-          <Flower />
-        </div>
+
       </div>
     </section>
   );
