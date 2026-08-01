@@ -50,8 +50,6 @@ export default function Hero() {
             </div>
           </div>
 
-
-          {/* Mockup */}
           <div className="flex justify-center items-center">
             <Image
               src="/mockups/abrielle.svg"

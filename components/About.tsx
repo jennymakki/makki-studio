@@ -9,7 +9,6 @@ export default function About() {
             src="/m.png"
             alt="Porträtt av Makki"
             fill
-            quality={20}
             className="object-cover"
           />
         </div>
