@@ -14,7 +14,7 @@ export default function Testimonial() {
             />
           ))}
         </div>
-        <p className="mt-6 text-xl md:text-lg leading-relaxed font-light text-[#3A3A3A] italic">
+        <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-[#3A3A3A] italic">
           Jenny är otroligt enkel att samarbeta med. Hon är lyhörd,
           lösningsorienterad och flexibel, och möter alltid utmaningar med en
           positiv energi.
