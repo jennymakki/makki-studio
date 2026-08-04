@@ -35,4 +35,11 @@ export const projects = [
     image: "/projects/makkis-vetenskapsrum.png",
     url: "https://makkis-vetenskaps-rum-1.vercel.app/",
   },
+  {
+  title: "Hacker Escape Room",
+  description:
+    "Ett konceptprojekt där jag designade och utvecklade en webbplats för ett fiktivt escape room-företag. Fokus låg på att skapa en modern digital upplevelse med tydlig struktur, stark visuell identitet och responsiv design.",
+  image: "/projects/esc.png",
+  url: "https://esc-hacker-escape-room.vercel.app/",
+},
 ];
