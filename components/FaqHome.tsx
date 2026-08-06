@@ -1,7 +1,7 @@
 export const faqHome = [
   {
     q: "Vad kostar en hemsida?",
-    a: "En enklare hemsida börjar från 7 900 kr. Priset beror på omfattning och behov, och du får alltid en fast offert innan projektet startar.",
+    a: "En enklare hemsida börjar från 9 900 kr. Priset beror på omfattning och behov, och du får alltid en fast offert innan projektet startar.",
   },
   {
     q: "Hur går det till att jobba med dig?",
