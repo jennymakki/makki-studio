@@ -3,7 +3,7 @@ import { Leaf, Rocket, Sparkles } from "lucide-react";
 const packages = [
   {
     title: "Start",
-    price: "Från 7 900 kr",
+    price: "Från 9 900 kr",
     desc: "En professionell hemsida när du vill komma igång snabbt & smidigt.",
     features: [
       "1–3 sidor",
@@ -20,7 +20,7 @@ const packages = [
   },
   {
     title: "Business",
-    price: "Från 14 900 kr",
+    price: "Från 18 900 kr",
     desc: "För företag som vill ta sin hemsida till nästa nivå och nå fler kunder.",
     features: [
       "Allt i Start",

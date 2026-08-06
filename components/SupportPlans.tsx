@@ -9,11 +9,11 @@ const plans = [
       "Tekniska uppdateringar",
       "Säkerhetskontroller",
       "Backup av webbplatsen",
-      "Mindre innehållsuppdateringar",
+      "Mindre innehållsuppdateringar, så som textändringar och bildbyten.",
       "Prestandaoptimering",
       "SEO-kontroller",
       "Månadsrapport",
-
+      "Upp till 30 minuter utveckling / månad"
     ],
   },
   {
