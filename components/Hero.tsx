@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "./Button";
 
-const tags = ["Webbdesign", "Webbutveckling", "UX/UI", "Shopify", "WordPress"];
+const tags = ["Webbdesign", "Webbutveckling", "UX/UI"];
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-lg bg-[#2F5D50]/4 px-2 py-2 text-xs text-[#2F5D50]"
+                  className="rounded-lg bg-[#2F5D50]/4 px-2 py-2 text-sm text-[#2F5D50]"
                 >
                   {tag}
                 </span>
