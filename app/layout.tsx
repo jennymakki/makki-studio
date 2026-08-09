@@ -7,43 +7,98 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://www.makkistudio.se";
+
 export const metadata: Metadata = {
-  title: "Webbutvecklare & hemsidor för företag | Makki Studio",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Makki Studio | Webbdesign & webbutveckling för företag",
+    template: "%s | Makki Studio",
+  },
+
   description:
-    "Jag bygger moderna, snabba och användarvänliga hemsidor för företag som vill växa online. Från design till utveckling och lansering.",
+    "Makki Studio är en webbyrå i Uppsala som erbjuder webbdesign och webbutveckling för företag. Moderna webbplatser från idé till lansering.",
 
   icons: {
     icon: "/favicon.png",
   },
 
-  metadataBase: new URL("https://www.makkistudio.se/"),
-
   verification: {
     google: "LNewI2VTW-7ROzqt-w_qsbfkJh7D3uOHQsuQKRuX-Ac",
   },
 
+  alternates: {
+    canonical: siteUrl,
+  },
+
   openGraph: {
-    title: "Makki Studio — Webbutveckling för företag",
+    title: "Makki Studio | Webbdesign & webbutveckling för företag",
     description:
-      "Moderna hemsidor och webbappar för företag som vill växa online.",
+      "Moderna webbplatser för företag. Webbdesign, webbutveckling och skräddarsydda digitala lösningar från Makki Studio i Uppsala.",
     type: "website",
-    url: "https://makkistudio.vercel.app/",
+    url: siteUrl,
+    siteName: "Makki Studio",
+    locale: "sv_SE",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Makki Studio",
+        alt: "Makki Studio – webbdesign och webbutveckling för företag",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Makki Studio — Webbutveckling",
-    description: "Moderna hemsidor för företag som vill växa online.",
+    title: "Makki Studio | Webbdesign & webbutveckling",
+    description:
+      "Moderna webbplatser för företag från Makki Studio i Uppsala.",
     images: ["/og-image.png"],
   },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${siteUrl}/#organization`,
+  name: "Makki Studio",
+  url: siteUrl,
+  description:
+    "Makki Studio är en webbyrå i Uppsala som erbjuder webbdesign och webbutveckling för företag.",
+
+  founder: {
+    "@type": "Person",
+    name: "Jenny Makki",
+  },
+
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Uppsala",
+    },
+    {
+      "@type": "Country",
+      name: "Sweden",
+    },
+  ],
+
+  knowsAbout: [
+    "Webbdesign",
+    "Webbutveckling",
+    "UX design",
+    "Shopify",
+    "WordPress",
+    "Squarespace",
+    "React",
+    "Next.js",
+    "Webbappar",
+  ],
+
+  sameAs: [
+   "https://www.linkedin.com/company/134684245/"
+  ],
 };
 
 export default function RootLayout({
@@ -56,9 +111,16 @@ export default function RootLayout({
       lang="sv"
       className={`${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans">
-        {children}
-      </body>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
+
+      <body>{children}</body>
     </html>
   );
 }

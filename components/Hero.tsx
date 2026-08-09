@@ -3,20 +3,13 @@
 import Image from "next/image";
 import { Button } from "./Button";
 
-const tags = [
-  "React",
-  "Squarespace",
-  "Shopify",
-  "WordPress",
-];
+const tags = ["Webbdesign", "Webbutveckling", "UX/UI", "Shopify", "WordPress"];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center">
       <div className="mx-auto max-w-7xl w-full px-6 md:px-12 py-20">
-
         <div className="grid md:grid-cols-2 gap-15 mt-10 lg:gap-0 items-center">
-
           <div>
             <div className="flex flex-wrap gap-3 mb-10">
               {tags.map((tag) => (
@@ -30,22 +23,21 @@ export default function Hero() {
             </div>
 
             <h1 className="max-w-xl text-3xl md:text-4xl font-light tracking-tight leading-[1.25] text-[#2F5D50]">
-              Jag designar och utvecklar webbplatser som känns lika unika som företagen bakom dem.
+              Webbdesign och webbutveckling <br/> för företag.
             </h1>
 
             <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#5A5A5A]">
-              Din webbplats är ofta det första intrycket av ditt företag.
-              Jag skapar moderna webbplatser som speglar ditt varumärke,
-              inger förtroende och hjälper dina besökare att hitta rätt.
+              Makki Studio är en webbyrå i Uppsala som designar och utvecklar
+              moderna webbplatser för företag. Jag hjälper dig från idé till
+              färdig webbplats – med fokus på design, användarupplevelse och en
+              lösning som passar ditt företag.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="#projects">
-                Se projekt
-              </Button>
+              <Button href="#projects">Se projekt</Button>
 
               <Button href="#cta" variant="secondary">
-                Kontakta mig
+                Berätta om ditt projekt
               </Button>
             </div>
           </div>
@@ -60,9 +52,7 @@ export default function Hero() {
               priority
             />
           </div>
-
         </div>
-
       </div>
     </section>
   );
