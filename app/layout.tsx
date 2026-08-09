@@ -63,8 +63,10 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${siteUrl}/#organization`,
+
   name: "Makki Studio",
   url: siteUrl,
+
   description:
     "Makki Studio är en webbyrå i Uppsala som erbjuder webbdesign och webbutveckling för företag.",
 
@@ -97,8 +99,23 @@ const organizationSchema = {
   ],
 
   sameAs: [
-   "https://www.linkedin.com/company/134684245/"
+    "https://www.linkedin.com/company/134684245/",
   ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+
+  name: "Makki Studio",
+  url: siteUrl,
+
+  publisher: {
+    "@id": `${siteUrl}/#organization`,
+  },
+
+  inLanguage: "sv-SE",
 };
 
 export default function RootLayout({
@@ -116,6 +133,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>
