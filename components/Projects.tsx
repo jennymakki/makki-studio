@@ -22,7 +22,7 @@ export default function Projects() {
         digitala verktyg.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
         {visibleProjects.map((project) => (
           <Card
             key={project.title}

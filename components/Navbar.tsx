@@ -42,7 +42,7 @@ export default function Navbar() {
             Projekt
           </Button>
 
-          <Button variant="ghost" href="/services">
+          <Button variant="ghost" href="/priser">
             Paket & priser
           </Button>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
 
               <Button
                 variant="ghost"
-                href="/services"
+                href="/priser"
                 className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
                 Paket & priser

@@ -59,7 +59,7 @@ export default function Services() {
         <p className=" text-[#3A3A3A] mb-4">Vill du se priser och paket?</p>
 
         <div className="flex justify-center">
-          <Button href="/services" className="w-auto">
+          <Button href="/priser" className="w-auto">
             Se paket & priser
           </Button>
         </div>
