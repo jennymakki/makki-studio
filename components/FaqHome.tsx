@@ -1,19 +1,15 @@
 export const faqHome = [
   {
-    q: "Vad kostar en hemsida?",
-    a: "En enklare hemsida börjar från 9 900 kr. Priset beror på omfattning och behov, och du får alltid en fast offert innan projektet startar.",
-  },
-  {
-    q: "Hur går det till att jobba med dig?",
-    a: "Vi börjar med ett samtal där vi går igenom dina mål. Sedan får du en tydlig plan, och jag sköter design och utveckling steg för steg med feedback från dig.",
+    q: "Vad kostar ett projekt?",
+    a: "Priset beror på projektets omfattning och vad du behöver hjälp med. Efter vårt första samtal får du ett tydligt upplägg och en offert innan vi börjar.",
   },
   {
     q: "Måste jag ha allt innehåll klart innan vi börjar?",
-    a: "Nej. Du behöver inte ha färdiga texter eller bilder. Jag hjälper dig att strukturera och forma innehållet under processen.",
+    a: "Nej. Du behöver inte ha färdiga texter eller bilder. Jag hjälper dig att strukturera och forma innehållet under projektet.",
   },
   {
-    q: "Kan du hjälpa mig om jag redan har en hemsida?",
-    a: "Ja, jag jobbar både med nya hemsidor och förbättring av befintliga webbplatser – både design, prestanda och funktioner.",
+    q: "Kan du hjälpa mig om jag redan har en webbplats?",
+    a: "Absolut. Jag hjälper även till med att förbättra design, prestanda och funktioner på befintliga webbplatser.",
   },
 ];
 
@@ -26,7 +22,8 @@ export default function FAQHome() {
         </h2>
 
         <p className="mt-4 text-base md:text-lg text-[#3A3A3A] leading-relaxed">
-          Här är några vanliga frågor från företag som vill bygga eller förbättra sin webbplats.
+          Några vanliga frågor om att starta eller vidareutveckla ett
+          webbprojekt.
         </p>
       </div>
 

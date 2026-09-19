@@ -33,10 +33,9 @@ export default function CTA() {
 
     const name = String(form.get("name") || "").trim();
     const email = String(form.get("email") || "").trim();
-    const service = String(form.get("service") || "").trim();
     const message = String(form.get("message") || "").trim();
 
-    if (!name || !email || !service || !message) {
+    if (!name || !email || !message) {
       setError("Fyll i alla obligatoriska fält ✨");
       return;
     }
@@ -46,10 +45,9 @@ export default function CTA() {
     const data = {
       name,
       email,
-      service,
+      service: String(form.get("service") || ""),
       message,
       timeline: String(form.get("timeline") || ""),
-      budget: String(form.get("budget") || ""),
     };
 
     try {
@@ -79,18 +77,18 @@ export default function CTA() {
         ref={successRef}
         aria-labelledby="contact-success-title"
         aria-live="polite"
-        className="py-16"
+        className="py-20"
       >
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto px-4 sm:px-8">
           <h2
             id="contact-success-title"
             className="text-3xl md:text-4xl font-light tracking-tight text-[#2F5D50]"
           >
-            Tack! Jag återkommer snart
+            Tack!
           </h2>
 
           <p className="mt-4 text-[#3A3A3A] leading-relaxed">
-            Jag har tagit emot din förfrågan och återkommer vanligtvis inom 1–2
+            Jag har fått ditt meddelande och återkommer vanligtvis inom 1–2
             arbetsdagar.
           </p>
         </div>
@@ -99,28 +97,32 @@ export default function CTA() {
   }
 
   return (
-    <section aria-labelledby="contact-title" className="py-16">
+    <section
+      id="cta"
+      aria-labelledby="contact-title"
+      className="py-20"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         <div className="max-w-2xl">
           <h2
             id="contact-title"
             className="text-3xl md:text-4xl font-light tracking-tight text-[#2F5D50]"
           >
-            Berätta om ditt projekt
+            Har du en idé? Berätta!
           </h2>
 
           <p
             id="contact-description"
             className="mt-5 text-base md:text-lg text-[#3A3A3A] leading-relaxed"
           >
-            Du behöver inte ha allt färdigt. Berätta om din idé så gott du kan,
-            så hjälper jag dig att hitta en lösning som passar ditt företag.
+            Du behöver inte veta exakt vad du behöver eller ha allt planerat.
+            Skriv några rader om vad du funderar på, så tar vi det därifrån.
           </p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          aria-label="Förfrågan om webbprojekt"
+          aria-label="Kontakta Makki Studio"
           aria-describedby="contact-description"
           className="mt-12 max-w-4xl space-y-8"
         >
@@ -130,8 +132,7 @@ export default function CTA() {
                 htmlFor="name"
                 className="block text-[#2F5D50] font-medium mb-2"
               >
-                Vad får jag kalla dig?
-                <span aria-hidden="true"> *</span>
+                Namn <span aria-hidden="true">*</span>
               </label>
 
               <input
@@ -150,8 +151,7 @@ export default function CTA() {
                 htmlFor="email"
                 className="block text-[#2F5D50] font-medium mb-2"
               >
-                Hur når jag dig?
-                <span aria-hidden="true"> *</span>
+                E-post <span aria-hidden="true">*</span>
               </label>
 
               <input
@@ -166,44 +166,14 @@ export default function CTA() {
             </div>
           </div>
 
-          <fieldset>
-            <legend className="block text-[#2F5D50] font-medium mb-3">
-              Vad vill du skapa?
-              <span aria-hidden="true"> *</span>
-            </legend>
-
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                "Ny webbplats",
-                "Befintlig webbplats",
-                "Webbapp",
-                "Vet inte riktigt än",
-              ].map((item) => (
-                <label
-                  key={item}
-                  className="flex items-center gap-3 rounded-xl border border-[#2F5D50]/10 bg-white p-4 cursor-pointer transition hover:border-[#2F5D50]/30 focus-within:ring-2 focus-within:ring-[#2F5D50]/20"
-                >
-                  <input
-                    type="radio"
-                    name="service"
-                    value={item}
-                    required
-                    className="accent-[#2F5D50]"
-                  />
-
-                  <span>{item}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
+        
 
           <div>
             <label
               htmlFor="message"
               className="block text-[#2F5D50] font-medium mb-2"
             >
-              Berätta gärna lite mer
-              <span aria-hidden="true"> *</span>
+              Berätta lite mer <span aria-hidden="true">*</span>
             </label>
 
             <textarea
@@ -211,61 +181,9 @@ export default function CTA() {
               name="message"
               rows={6}
               required
-              placeholder="Du behöver inte ha allt klart. Skriv några rader om din idé, mål eller vad du vill förbättra."
+              placeholder="Berätta så mycket du vet i dagsläget - du behöver inte ha en färdig plan."
               className="w-full rounded-xl border border-[#2F5D50]/20 bg-white px-4 py-3 outline-none transition focus:ring-2 focus:ring-[#2F5D50]/20 focus:border-[#2F5D50]/40 resize-none"
             />
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <label
-                htmlFor="timeline"
-                className="block text-[#2F5D50] font-medium mb-2"
-              >
-                När vill du komma igång?
-              </label>
-
-              <select
-                id="timeline"
-                name="timeline"
-                defaultValue="Så snart som möjligt"
-                className="w-full rounded-xl border border-[#2F5D50]/20 bg-white px-4 py-3 outline-none transition focus:ring-2 focus:ring-[#2F5D50]/20 focus:border-[#2F5D50]/40"
-              >
-                <option value="Så snart som möjligt">
-                  Så snart som möjligt
-                </option>
-
-                <option value="Inom några månader">Inom några månader</option>
-
-                <option value="Jag undersöker bara möjligheterna">
-                  Jag undersöker bara möjligheterna
-                </option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                htmlFor="budget"
-                className="block text-[#2F5D50] font-medium mb-2"
-              >
-                Budget (frivilligt)
-              </label>
-
-              <select
-                id="budget"
-                name="budget"
-                defaultValue="Vet inte ännu"
-                className="w-full rounded-xl border border-[#2F5D50]/20 bg-white px-4 py-3 outline-none transition focus:ring-2 focus:ring-[#2F5D50]/20 focus:border-[#2F5D50]/40"
-              >
-                <option value="Vet inte ännu">Vet inte ännu</option>
-
-                <option value="Under 10 000 kr">Under 10 000 kr</option>
-
-                <option value="10 000–20 000 kr">10 000–20 000 kr</option>
-
-                <option value="20 000+ kr">20 000+ kr</option>
-              </select>
-            </div>
           </div>
 
           {error && (
@@ -284,12 +202,9 @@ export default function CTA() {
               aria-busy={loading}
               className="bg-[#2F5D50] hover:bg-[#244A3F] disabled:opacity-60 disabled:cursor-not-allowed transition text-white px-8 py-3 rounded-xl font-medium"
             >
-              {loading ? "Skickar förfrågan..." : "Skicka förfrågan"}
+              {loading ? "Skickar..." : "Skicka meddelande"}
             </Button>
 
-            <p className="mt-4 text-sm text-[#666]">
-              Jag återkommer vanligtvis inom 1–2 arbetsdagar.
-            </p>
           </div>
 
           <div

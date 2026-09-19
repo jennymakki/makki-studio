@@ -1,21 +1,20 @@
-import { Globe, AppWindow, Palette } from "lucide-react";
-import { Button } from "./Button";
+import { Globe, AppWindow, RefreshCw } from "lucide-react";
 
 const services = [
   {
     title: "Webbplatser",
-    desc: "Design och utveckling av moderna hemsidor som presenterar ditt företag och hjälper dig få fler kunder.",
+    desc: "Design och utveckling av moderna webbplatser med tydlig struktur, genomtänkt UX och ett uttryck som passar ditt företag.",
     icon: Globe,
   },
   {
     title: "Webbappar",
-    desc: "Skräddarsydda system med inloggning, databaser och funktioner anpassade efter din verksamhet.",
+    desc: "Skräddarsydda digitala lösningar med exempelvis inloggning, databaser och funktioner anpassade efter din verksamhet.",
     icon: AppWindow,
   },
   {
     title: "Vidareutveckling",
-    desc: "Förbättring av befintliga webbplatser – design, prestanda och nya funktioner.",
-    icon: Palette,
+    desc: "Förbättring och vidareutveckling av befintliga webbplatser – från design och prestanda till nya funktioner.",
+    icon: RefreshCw,
   },
 ];
 
@@ -23,13 +22,13 @@ export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-5xl px-6 py-20">
       <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
-        Tjänster
+        Vad kan jag hjälpa dig med?
       </h2>
 
       <p className="mt-4 max-w-2xl text-base md:text-lg text-[#3A3A3A] leading-relaxed">
-        Oavsett om du behöver en helt ny webbplats eller vill utveckla något som
-        redan finns hjälper jag dig att skapa en lösning som är tydlig,
-        användarvänlig och byggd för att hålla över tid.
+        Oavsett om du behöver en ny webbplats, en skräddarsydd digital lösning
+        eller vill förbättra något du redan har, hjälper jag dig att hitta en
+        lösning som passar ditt företag.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
@@ -53,16 +52,6 @@ export default function Services() {
             </div>
           );
         })}
-      </div>
-
-      <div className="mt-14 text-center">
-        <p className=" text-[#3A3A3A] mb-4">Vill du se priser och paket?</p>
-
-        <div className="flex justify-center">
-          <Button href="/priser" className="w-auto">
-            Se paket & priser
-          </Button>
-        </div>
       </div>
     </section>
   );

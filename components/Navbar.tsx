@@ -42,10 +42,6 @@ export default function Navbar() {
             Projekt
           </Button>
 
-          <Button variant="ghost" href="/priser">
-            Paket & priser
-          </Button>
-
           <Button variant="ghost" href={toSection("cta")}>
             Kontakt
           </Button>
@@ -97,14 +93,6 @@ export default function Navbar() {
                 className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
               >
                 Projekt
-              </Button>
-
-              <Button
-                variant="ghost"
-                href="/priser"
-                className="justify-start px-5 py-4 border-t border-[#2F5D50]/5"
-              >
-                Paket & priser
               </Button>
 
               <Button

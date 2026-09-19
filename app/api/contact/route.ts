@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, message, service, timeline, budget } = body;
+    const { name, email, message } = body;
 
     await resend.emails.send({
       from: "Makki Studio <onboarding@resend.dev>",
@@ -18,9 +18,6 @@ export async function POST(req: Request) {
 
         <p><strong>Namn:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Typ:</strong> ${service}</p>
-        <p><strong>Tidsplan:</strong> ${timeline}</p>
-        <p><strong>Budget:</strong> ${budget}</p>
 
         <h3>Meddelande</h3>
         <p>${message}</p>

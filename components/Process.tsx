@@ -3,28 +3,23 @@ import { ArrowDown } from "lucide-react";
 const steps = [
   {
     number: "1",
-    title: "Vi lär känna varandra",
-    desc: "Vi börjar med ett samtal där vi pratar om ditt företag, dina mål och dina idéer.",
+    title: "Vi pratar om ditt projekt",
+    desc: "Vi börjar med ett samtal där vi går igenom vad du behöver, dina mål och dina idéer.",
   },
   {
     number: "2",
     title: "Förslag & plan",
-    desc: "Du får ett tydligt upplägg med vad som ingår och vad projektet kommer att kosta.",
+    desc: "Du får ett tydligt upplägg och en offert anpassad efter projektets omfattning.",
   },
   {
     number: "3",
     title: "Design & utveckling",
-    desc: "Jag bygger webbplatsen och du får löpande möjlighet att ge feedback.",
+    desc: "Jag arbetar med projektet steg för steg och du får möjlighet att ge feedback längs vägen.",
   },
   {
     number: "4",
     title: "Lansering",
-    desc: "När allt känns rätt publicerar vi sidan.",
-  },
-  {
-    number: "5",
-    title: "Jag finns kvar",
-    desc: "Behöver du hjälp senare finns jag bara ett mejl bort.",
+    desc: "När allt är klart publicerar vi lösningen och ser till att allt fungerar som det ska.",
   },
 ];
 
@@ -32,12 +27,12 @@ export default function Process() {
   return (
     <section id="process" className="mx-auto max-w-5xl px-6 py-20">
       <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
-        Hur det går till
+        Så går det till
       </h2>
 
       <p className="mt-4 max-w-2xl text-base md:text-lg text-[#3A3A3A] leading-relaxed">
         Jag vill att det ska kännas enkelt att anlita mig. Därför vet du alltid
-        vad som händer härnäst – från första samtalet till en färdig webbplats.
+        vad som händer härnäst – från första samtalet till färdig lösning.
       </p>
 
       <div className="mt-12 max-w-3xl space-y-4">

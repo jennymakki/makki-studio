@@ -3,25 +3,13 @@
 import Image from "next/image";
 import { Button } from "./Button";
 
-const tags = ["Webbdesign", "Webbutveckling", "UX/UI"];
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center">
-      <div className="mx-auto max-w-7xl w-full px-6 md:px-12 py-20">
+      <div className="mx-auto max-w-7xl w-full px-6 md:px-12 md:py-20 py-40">
         <div className="grid md:grid-cols-2 gap-15 lg:gap-0 items-center">
           
           <div>
-            <div className="flex flex-wrap gap-3 mb-10">
-              {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-lg bg-[#2F5D50]/4 px-3 py-2 text-sm text-[#2F5D50]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
 
             <h1 className="max-w-xl text-3xl md:text-4xl font-light tracking-tight leading-[1.25] text-[#2F5D50]">
               Webbdesign och webbutveckling
