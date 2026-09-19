@@ -9,13 +9,14 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center">
       <div className="mx-auto max-w-7xl w-full px-6 md:px-12 py-20">
-        <div className="grid md:grid-cols-2 gap-15 mt-10 lg:gap-0 items-center">
+        <div className="grid md:grid-cols-2 gap-15 lg:gap-0 items-center">
+          
           <div>
             <div className="flex flex-wrap gap-3 mb-10">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-lg bg-[#2F5D50]/4 px-2 py-2 text-sm text-[#2F5D50]"
+                  className="rounded-lg bg-[#2F5D50]/4 px-3 py-2 text-sm text-[#2F5D50]"
                 >
                   {tag}
                 </span>
@@ -23,14 +24,15 @@ export default function Hero() {
             </div>
 
             <h1 className="max-w-xl text-3xl md:text-4xl font-light tracking-tight leading-[1.25] text-[#2F5D50]">
-              Webbdesign och webbutveckling <br/> för företag.
+              Webbdesign och webbutveckling
+              <br />
+              för företag.
             </h1>
 
-            <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-[#5A5A5A]">
-              Makki Studio är en webbyrå i Uppsala som designar och utvecklar
-              moderna webbplatser för företag. Jag hjälper dig från idé till
-              färdig webbplats – med fokus på design, användarupplevelse och en
-              lösning som passar ditt företag.
+            <p className="mt-6 max-w-lg text-base md:text-lg leading-relaxed text-[#5A5A5A]">
+              Jag designar och utvecklar moderna webbplatser och digitala
+              lösningar – från idé och användarupplevelse till färdig
+              webbplats.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -52,6 +54,7 @@ export default function Hero() {
               priority
             />
           </div>
+
         </div>
       </div>
     </section>
