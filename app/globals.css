@@ -1,27 +1,88 @@
+
 @import "tailwindcss";
 
+/* ========================================
+   MAKKI STUDIO – DESIGN SYSTEM
+======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand colors */
+  --brand: #2F5D50;
+  --brand-dark: #24483D;
+
+  /* Backgrounds */
+  --background: #F8F8F4;
+  --surface: #FFFFFF;
+  --surface-muted: #E9EEE8;
+
+  /* Accent */
+  --accent: #D6E0D8;
+
+  /* Typography */
+  --heading: #292F2B;
+  --foreground: #4F5751;
+  --muted: #777E77;
+
+  /* Borders */
+  --border: #E2E6E0;
+
+  /* Typography */
+  --font-body: var(--font-manrope);
+  --font-display: var(--font-dm-serif);
+
+  /* Layout */
+  --radius: 8px;
 }
+
+/* ========================================
+   TAILWIND THEME
+======================================== */
 
 @theme inline {
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+
+  --color-accent: var(--accent);
+
+  --color-heading: var(--heading);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-html {
-  scroll-behavior: smooth;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--brand-dark);
 }

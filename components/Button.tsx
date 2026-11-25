@@ -32,8 +32,8 @@ function getStyles(variant: Variant = "primary") {
   switch (variant) {
     case "secondary":
       return `
-        border border-[#2F5D50]
-        text-[#2F5D50]
+        border border-heading
+        text-heading
         hover:bg-[#8B6B4E]/10
         hover:-translate-y-0.5
       `;
@@ -67,10 +67,10 @@ export function Button(props: Props) {
     items-center
     justify-center
     gap-2
-    rounded-xl
+    rounded-sm
     font-medium
-    px-5
-    py-3
+    px-6
+    py-2
     cursor-pointer
     transition-all
     duration-300

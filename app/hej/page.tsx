@@ -1,13 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Testimonial from "@/components/Testimonial";
-import Reasons from "@/components/Reasons";
-import About from "@/components/About";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function WelcomePage() {
   return (
-    <main className="bg-[#F3EDE3] min-h-screen">
+    <main className="min-h-screen">
       <Navbar />
       <section className="max-w-5xl mx-auto px-6 pt-34 pb-25 text-center">
         <h1 className="mt-8 text-4xl md:text-6xl font-light tracking-tight text-[#2F5D50] leading-tight">
@@ -25,11 +23,7 @@ export default function WelcomePage() {
         </p>
       </section>
 
-      <About />
-
       <Testimonial />
-
-      <Reasons />
 
       <CTA />
 

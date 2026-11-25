@@ -1,44 +1,51 @@
+
 "use client";
 
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./Button";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center">
-      <div className="mx-auto max-w-7xl w-full px-6 md:px-12 md:py-20 py-40">
-        <div className="grid md:grid-cols-2 gap-15 lg:gap-0 items-center">
-          
-          <div>
+    <section className="flex min-h-[85vh] items-center bg-background overflow-hidden">
+      <div className="mx-auto w-full max-w-7xl px-6 py-28 md:px-12">
 
-            <h1 className="max-w-xl text-3xl md:text-4xl font-light tracking-tight leading-[1.25] text-[#2F5D50]">
-              Webbdesign och webbutveckling
-              <br />
-              för företag.
+        <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
+
+          {/* Text */}
+          <div className="max-w-xl">
+
+            <h1 className="text-4xl font-medium leading-[1.15] tracking-tight text-heading md:text-5xl lg:text-6xl">
+              Webbdesign och webbutveckling för företag.
             </h1>
 
-            <p className="mt-6 max-w-lg text-base md:text-lg leading-relaxed text-[#5A5A5A]">
-              Jag designar och utvecklar moderna webbplatser och digitala
-              lösningar – från idé och användarupplevelse till färdig
-              webbplats.
+            <p className="mt-7 max-w-md text-base leading-relaxed text-muted md:text-lg">
+              Jag hjälper företag att skapa moderna webbplatser
+              med genomtänkt design, bra användarupplevelse och
+              teknik som fungerar.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="#projects">Se projekt</Button>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Button href="#projects">
+                Se mina projekt
+                <ArrowRight size={16} />
+              </Button>
 
               <Button href="#cta" variant="secondary">
-                Berätta om ditt projekt
+                Kontakta mig
               </Button>
             </div>
+
           </div>
 
-          <div className="flex justify-center items-center">
+          {/* Project mockup */}
+          <div className="flex items-center justify-center md:justify-end">
             <Image
               src="/mockups/abrielle.svg"
               width={650}
               height={700}
               alt="Abrielle website design"
-              className="w-full max-w-lg drop-shadow-xl"
+              className="w-full max-w-xl"
               priority
             />
           </div>

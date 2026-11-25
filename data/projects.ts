@@ -27,7 +27,7 @@ export const projects = [
       "Design, fotografering och webbutveckling av en portfolio där minimalismen låter träkonstverken stå i centrum. Gott om luft, diskret typografi och återhållsam design ger en exklusiv känsla där texten fungerar som ett stöd till hantverket.",
     image: "/projects/matt-gallery.png",
     url: "https://matt-gallery.vercel.app/",
-  },
+  }, /*
   {
     title: "Makkis vetenskapsrum",
     description:
@@ -48,5 +48,5 @@ export const projects = [
       "Ett konceptprojekt där jag designade och utvecklade en webbplats för ett fiktivt escape room-företag. Fokus låg på att skapa en modern digital upplevelse med tydlig struktur, stark visuell identitet och responsiv design.",
     image: "/projects/esc.png",
     url: "https://esc-hacker-escape-room.vercel.app/",
-  },
+  },*/
 ];

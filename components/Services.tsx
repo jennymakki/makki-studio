@@ -1,55 +1,54 @@
-import { Globe, AppWindow, RefreshCw } from "lucide-react";
 
 const services = [
   {
     title: "Webbplatser",
     desc: "Design och utveckling av moderna webbplatser med tydlig struktur, genomtänkt UX och ett uttryck som passar ditt företag.",
-    icon: Globe,
   },
   {
     title: "Webbappar",
     desc: "Skräddarsydda digitala lösningar med exempelvis inloggning, databaser och funktioner anpassade efter din verksamhet.",
-    icon: AppWindow,
   },
   {
     title: "Vidareutveckling",
     desc: "Förbättring och vidareutveckling av befintliga webbplatser – från design och prestanda till nya funktioner.",
-    icon: RefreshCw,
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[#2F5D50]">
-        Vad kan jag hjälpa dig med?
-      </h2>
+    <section
+      id="services"
+      className="mx-auto max-w-6xl px-6 py-24 md:px-12 md:py-32"
+    >
+      <div className="max-w-2xl">
+        <h2 className="text-3xl font-medium tracking-tight text-heading md:text-4xl">
+          Vad kan jag hjälpa dig med?
+        </h2>
 
-      <p className="mt-4 max-w-2xl text-base md:text-lg text-[#3A3A3A] leading-relaxed">
-        Oavsett om du behöver en ny webbplats, en skräddarsydd digital lösning
-        eller vill förbättra något du redan har, hjälper jag dig att hitta en
-        lösning som passar ditt företag.
-      </p>
+        <p className="mt-5 text-base leading-relaxed text-muted md:text-lg">
+          Oavsett om du behöver en ny webbplats, en skräddarsydd digital lösning
+          eller vill förbättra något du redan har, hjälper jag dig att hitta en
+          lösning som passar ditt företag.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
         {services.map((service) => {
-          const Icon = service.icon;
 
           return (
-            <div
+            <article
               key={service.title}
-              className="p-6 rounded-2xl bg-[#F7F2EA] border border-[rgba(47,93,80,0.12)] shadow-sm hover:shadow-md transition text-center"
+              className="rounded-xl border border-[#35695A] p-7 transition-colors duration-200 hover:border-brand/30 md:p-8"
             >
-              <Icon className="w-5 h-5 text-[#2F5D50] mb-4 mx-auto" />
 
-              <h3 className="text-lg font-medium text-[#2F5D50]">
+              <h3 className="text-lg font-semibold tracking-tight text-heading">
                 {service.title}
               </h3>
 
-              <p className="mt-3 text-[#3A3A3A] leading-relaxed">
+              <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
                 {service.desc}
               </p>
-            </div>
+            </article>
           );
         })}
       </div>

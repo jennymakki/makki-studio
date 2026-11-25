@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -24,19 +25,16 @@ export default function CTA() {
     setError("");
 
     const form = new FormData(e.currentTarget);
-
     const company = String(form.get("company") || "").trim();
 
-    if (company) {
-      return;
-    }
+    if (company) return;
 
     const name = String(form.get("name") || "").trim();
     const email = String(form.get("email") || "").trim();
     const message = String(form.get("message") || "").trim();
 
     if (!name || !email || !message) {
-      setError("Fyll i alla obligatoriska fält ✨");
+      setError("Fyll i alla obligatoriska fält.");
       return;
     }
 
@@ -59,17 +57,18 @@ export default function CTA() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) {
-        throw new Error("Request failed");
-      }
+      if (!res.ok) throw new Error("Request failed");
 
       setSuccess(true);
     } catch {
-      setError("Något gick fel, försök igen 🙏");
+      setError("Något gick fel, försök igen.");
     } finally {
       setLoading(false);
     }
   }
+
+  const fieldStyles =
+    "w-full rounded-lg border border-border bg-surface px-4 py-3 text-heading placeholder:text-muted/70 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10";
 
   if (success) {
     return (
@@ -79,15 +78,15 @@ export default function CTA() {
         aria-live="polite"
         className="py-20"
       >
-        <div className="max-w-2xl mx-auto px-4 sm:px-8">
+        <div className="mx-auto max-w-2xl px-4 sm:px-8">
           <h2
             id="contact-success-title"
-            className="text-3xl md:text-4xl font-light tracking-tight text-[#2F5D50]"
+            className="text-3xl font-medium tracking-tight text-heading md:text-4xl"
           >
             Tack!
           </h2>
 
-          <p className="mt-4 text-[#3A3A3A] leading-relaxed">
+          <p className="mt-4 leading-relaxed text-muted">
             Jag har fått ditt meddelande och återkommer vanligtvis inom 1–2
             arbetsdagar.
           </p>
@@ -97,23 +96,19 @@ export default function CTA() {
   }
 
   return (
-    <section
-      id="cta"
-      aria-labelledby="contact-title"
-      className="py-20"
-    >
-      <div className="max-w-4xl mx-auto px-4 sm:px-8">
+    <section id="cta" aria-labelledby="contact-title" className="py-20">
+      <div className="mx-auto max-w-4xl px-4 sm:px-8">
         <div className="max-w-2xl">
           <h2
             id="contact-title"
-            className="text-3xl md:text-4xl font-light tracking-tight text-[#2F5D50]"
+            className="text-3xl font-medium tracking-tight text-heading md:text-4xl"
           >
-            Har du en idé? Berätta!
+            Kontakt
           </h2>
 
           <p
             id="contact-description"
-            className="mt-5 text-base md:text-lg text-[#3A3A3A] leading-relaxed"
+            className="mt-5 text-base leading-relaxed text-muted md:text-lg"
           >
             Du behöver inte veta exakt vad du behöver eller ha allt planerat.
             Skriv några rader om vad du funderar på, så tar vi det därifrån.
@@ -126,11 +121,11 @@ export default function CTA() {
           aria-describedby="contact-description"
           className="mt-12 max-w-4xl space-y-8"
         >
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 md:grid-cols-2">
             <div>
               <label
                 htmlFor="name"
-                className="block text-[#2F5D50] font-medium mb-2"
+                className="mb-2 block font-medium text-heading"
               >
                 Namn <span aria-hidden="true">*</span>
               </label>
@@ -142,14 +137,14 @@ export default function CTA() {
                 required
                 autoComplete="name"
                 placeholder="Ditt namn"
-                className="w-full rounded-xl border border-[#2F5D50]/20 bg-white px-4 py-3 outline-none transition focus:ring-2 focus:ring-[#2F5D50]/20 focus:border-[#2F5D50]/40"
+                className={fieldStyles}
               />
             </div>
 
             <div>
               <label
                 htmlFor="email"
-                className="block text-[#2F5D50] font-medium mb-2"
+                className="mb-2 block font-medium text-heading"
               >
                 E-post <span aria-hidden="true">*</span>
               </label>
@@ -161,17 +156,15 @@ export default function CTA() {
                 required
                 autoComplete="email"
                 placeholder="namn@email.se"
-                className="w-full rounded-xl border border-[#2F5D50]/20 bg-white px-4 py-3 outline-none transition focus:ring-2 focus:ring-[#2F5D50]/20 focus:border-[#2F5D50]/40"
+                className={fieldStyles}
               />
             </div>
           </div>
 
-        
-
           <div>
             <label
               htmlFor="message"
-              className="block text-[#2F5D50] font-medium mb-2"
+              className="mb-2 block font-medium text-heading"
             >
               Berätta lite mer <span aria-hidden="true">*</span>
             </label>
@@ -181,17 +174,13 @@ export default function CTA() {
               name="message"
               rows={6}
               required
-              placeholder="Berätta så mycket du vet i dagsläget - du behöver inte ha en färdig plan."
-              className="w-full rounded-xl border border-[#2F5D50]/20 bg-white px-4 py-3 outline-none transition focus:ring-2 focus:ring-[#2F5D50]/20 focus:border-[#2F5D50]/40 resize-none"
+              placeholder="Berätta så mycket du vet i dagsläget – du behöver inte ha en färdig plan."
+              className={`${fieldStyles} resize-none`}
             />
           </div>
 
           {error && (
-            <p
-              role="alert"
-              aria-live="assertive"
-              className="text-red-600 text-sm"
-            >
+            <p role="alert" aria-live="assertive" className="text-sm text-red-700">
               {error}
             </p>
           )}
@@ -200,19 +189,17 @@ export default function CTA() {
             <Button
               type="submit"
               aria-busy={loading}
-              className="bg-[#2F5D50] hover:bg-[#244A3F] disabled:opacity-60 disabled:cursor-not-allowed transition text-white px-8 py-3 rounded-xl font-medium"
             >
               {loading ? "Skickar..." : "Skicka meddelande"}
             </Button>
-
           </div>
 
+          {/* Honeypot */}
           <div
             aria-hidden="true"
             className="absolute -left-[9999px] h-px w-px overflow-hidden"
           >
             <label htmlFor="company">Company</label>
-
             <input
               id="company"
               type="text"

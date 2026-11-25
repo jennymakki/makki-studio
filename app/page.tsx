@@ -4,23 +4,17 @@ import Services from "@/components/Services";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Process from "@/components/Process";
-import About from "@/components/About";
 import Testimonial from "@/components/Testimonial";
-import FAQHome from "@/components/FaqHome";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F3EDE3]">
+    <main className="min-h-screen">
       <Navbar />
       <Hero />
       <Testimonial />
       <Projects />
       <Services />
-      <Process />
-      <FAQHome />
       <CTA />
-      <About />
       <Footer />
     </main>
   );
