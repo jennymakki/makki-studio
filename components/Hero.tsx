@@ -17,7 +17,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-7 max-w-md text-base leading-relaxed text-muted md:text-lg">
-              Jag hjälper företag att skapa moderna webbplatser
+              Makki Studio hjälper företag att skapa moderna webbplatser
               med genomtänkt design, bra användarupplevelse och
               teknik som fungerar.
             </p>
