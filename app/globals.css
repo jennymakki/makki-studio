@@ -1,10 +1,6 @@
 
 @import "tailwindcss";
 
-/* ========================================
-   MAKKI STUDIO – DESIGN SYSTEM
-======================================== */
-
 :root {
   /* Brand colors */
   --brand: #2F5D50;
@@ -34,10 +30,6 @@
   --radius: 8px;
 }
 
-/* ========================================
-   TAILWIND THEME
-======================================== */
-
 @theme inline {
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
@@ -58,9 +50,6 @@
   --font-display: var(--font-display);
 }
 
-/* ========================================
-   GLOBAL STYLES
-======================================== */
 
 html {
   scroll-behavior: smooth;
