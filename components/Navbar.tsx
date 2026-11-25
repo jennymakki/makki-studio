@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,7 +14,6 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
-        {/* Logo */}
         <Link
           href="/"
           className="flex items-center gap-3"
@@ -39,10 +37,8 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Contact button */}
         <Button href={contactHref}>
           Kontakt
-          <ArrowRight size={16} />
         </Button>
       </div>
     </header>
