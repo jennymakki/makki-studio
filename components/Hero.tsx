@@ -1,9 +1,6 @@
-
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { Button } from "./Button";
 
 export default function Hero() {
   return (
@@ -24,17 +21,6 @@ export default function Hero() {
               med genomtänkt design, bra användarupplevelse och
               teknik som fungerar.
             </p>
-
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button href="#projects">
-                Se mina projekt
-                <ArrowRight size={16} />
-              </Button>
-
-              <Button href="#cta" variant="secondary">
-                Kontakta mig
-              </Button>
-            </div>
 
           </div>
 
